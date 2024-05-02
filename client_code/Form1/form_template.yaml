@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: label_3
-    properties: {text: Admin, align: center, bold: true}
+    properties: {text: Basic Info, align: center, bold: true}
     type: Label
     layout_properties: {grid_position: 'MVOHEH,BPQIVA'}
   - name: label_1
@@ -20,6 +20,14 @@ components:
     properties: {text: Group/University, align: right}
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB FYXSLW,XQDUWT'}
+  - name: label_4
+    properties: {text: Bag Number, align: right}
+    type: Label
+    layout_properties: {grid_position: 'CTITOL,HGDBCB UTLHYH,FPTUTN'}
+  - name: label_5
+    properties: {text: Experiment Type, align: right}
+    type: Label
+    layout_properties: {grid_position: 'CTITOL,HGDBCB NGPVIF,OSGJUK'}
   - name: text_box_1
     properties: {align: left}
     type: TextBox
@@ -28,3 +36,86 @@ components:
     properties: {visible: true, enabled: true, align: left}
     type: TextBox
     layout_properties: {grid_position: 'CTITOL,SZRCGY COBDMU,SUUKUZ'}
+  - name: text_box_3
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'CTITOL,SZRCGY IRNMIK,NFUNUI'}
+  - name: radio_button_1
+    properties: {text: Phasing}
+    type: RadioButton
+    layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,HAEOBH'}
+  - name: radio_button_2
+    properties: {text: Ion Identification}
+    type: RadioButton
+    layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,APONBZ'}
+  - name: radio_button_3
+    properties: {text: Other}
+    type: RadioButton
+    layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,PXRQNH'}
+  - name: label_6
+    properties: {text: Protein Name, align: right}
+    type: Label
+    layout_properties: {grid_position: 'PWSEXD,JENBBH'}
+  - name: text_box_6
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'PWSEXD,ADWSNT'}
+  - name: label_7
+    properties: {text: Construct Sequence, align: right}
+    type: Label
+    layout_properties: {grid_position: 'NETSCX,AYVJKX'}
+  - name: text_area_2
+    properties: {height: 216.78125}
+    type: TextArea
+    layout_properties: {grid_position: 'NETSCX,PAZVWM'}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'ZJDTWE,BINNCC'}
+  - name: card_1
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BUEARU,UDUOXA'}
+    components:
+    - name: label_10
+      properties: {text: Crystal Information, bold: true, align: center}
+      type: Label
+      layout_properties: {grid_position: 'TZXURA,VNRAFT'}
+  - name: label_8
+    properties: {text: Crystallisation Conditions, align: right}
+    type: Label
+    layout_properties: {grid_position: 'NECIQH,KVRYAZ'}
+  - name: text_area_1
+    properties: {}
+    type: TextArea
+    layout_properties: {grid_position: 'NECIQH,QJYTXY'}
+  - name: check_box_2
+    properties: {text: Cryo-protectant, checked: false, align: right}
+    type: CheckBox
+    layout_properties: {grid_position: 'XNPDCE,GIIYRN'}
+  - name: text_box_4
+    properties: {enabled: false}
+    type: TextBox
+    layout_properties: {grid_position: 'XNPDCE,CQUJZA'}
+    event_bindings: {show: text_box_4_show}
+  - name: check_box_1
+    properties: {text: LCP, align: center}
+    type: CheckBox
+    layout_properties: {grid_position: 'DVFLSV,RVSZWL'}
+  - name: label_9
+    properties: {text: Morphology}
+    type: Label
+    layout_properties: {grid_position: 'PGZPGT,QQSTMD'}
+  - name: drop_down_1
+    properties:
+      items: [Cube, Rod, Plate, Needle, Pyrimidal, Bi-pyrimidal, Blob, Smoosh, Other]
+    type: DropDown
+    layout_properties: {grid_position: 'PGZPGT,CTFPNG'}
+  - name: label_11
+    properties: {text: Average Crystal Size}
+    type: Label
+    layout_properties: {grid_position: 'BGEZWO,PWLYOQ'}
+  - name: text_box_5
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'BGEZWO,WRDEOK'}
