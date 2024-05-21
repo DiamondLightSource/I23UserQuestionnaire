@@ -1,10 +1,14 @@
 allow_embedding: false
-package_name: Classic_2
+package_name: I23_Questionnaire
 startup: {type: form, module: questionnaire}
-name: Classic 2
+name: I23 Questionnaire
 startup_form: null
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
+dependencies:
+- dep_id: dep_75xiqcq69fnnc5
+  version: {dev: false}
+  resolution_hints: {app_id: VLHZXVIKFTEZ6F35, name: Diamond I23 - Yosoku, package_name: Diamond_I23___Yosoku}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
