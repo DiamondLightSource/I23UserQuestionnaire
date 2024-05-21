@@ -4,20 +4,31 @@ container:
   properties: {html: ''}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"HGDBCB":20,"SZRCGY":40,"JENBBH":20,"ADWSNT":40,"AYVJKX":20,"PAZVWM":40,"KVRYAZ":20,"QJYTXY":50,"GIIYRN":15,"CQUJZA":45,"QQSTMD":20,"CTFPNG":40,"PWLYOQ":20,"WRDEOK":40,"EFSONE":20,"LDPQLY":40,"AYTNEX":10}'}
+  properties: {col_widths: '{"HGDBCB":20,"SZRCGY":40,"JENBBH":20,"ADWSNT":40,"AYVJKX":20,"PAZVWM":40,"KVRYAZ":20,"QJYTXY":50,"GIIYRN":15,"CQUJZA":45,"QQSTMD":20,"CTFPNG":40,"PWLYOQ":20,"WRDEOK":40,"EFSONE":20,"LDPQLY":40,"AYTNEX":10,"AETTBX":10,"IBQNEQ":50}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
   - name: card_2
     properties: {role: card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'DYMXBY,OMHCCG'}
+    layout_properties: {grid_position: 'SHMVFX,OYVHAN'}
     components:
     - name: label_12
-      properties: {text: I23 User Questionnaire, align: center, bold: true, underline: true,
+      properties: {text: I23 User Questionnaire, align: center, bold: true, underline: false,
         background: '', spacing_above: small, spacing_below: medium, font_size: 36}
       type: Label
       layout_properties: {grid_position: 'QOXDPX,YXEVCF'}
+    - name: text_area_3
+      properties: {text: 'Please fill in as much of the questionnaire as you can.
+          Any sections you are unable to complete, please leave blank. If you have
+          any questions about this form or I23 in general, please email armin.wagner@diamond.ac.uk.
+
+
+          By submitting this form, you agree that the I23 team at Diamond Light Source
+          are able to look over the provided data to judge project feasibility and
+          help with planning your experiment. ', height: 119.04296875, enabled: true}
+      type: TextArea
+      layout_properties: {grid_position: 'XXPWCH,XHOJRU'}
   - name: label_3
     properties: {text: Basic Info, align: center, bold: true}
     type: Label
@@ -26,6 +37,10 @@ components:
     properties: {text: Name, align: right}
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB UNYDXN,DNZDMO', full_width_row: false}
+  - name: label_24
+    properties: {text: Email, align: right}
+    type: Label
+    layout_properties: {grid_position: 'CTITOL,HGDBCB IOPBNU,VFQEVD'}
   - name: label_2
     properties: {text: Group/University, align: right}
     type: Label
@@ -34,6 +49,10 @@ components:
     properties: {text: Bag Number, align: right}
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB UTLHYH,FPTUTN'}
+  - name: label_30
+    properties: {text: I23 Local Contact, align: right}
+    type: Label
+    layout_properties: {grid_position: 'CTITOL,HGDBCB RHHRNT,BKOZLJ'}
   - name: label_5
     properties: {text: Experiment Type, align: right}
     type: Label
@@ -42,6 +61,10 @@ components:
     properties: {align: left}
     type: TextBox
     layout_properties: {grid_position: 'CTITOL,SZRCGY XFZCIT,RPVDYF'}
+  - name: text_box_15
+    properties: {type: email}
+    type: TextBox
+    layout_properties: {grid_position: 'CTITOL,SZRCGY TLJETO,MUSSTK'}
   - name: text_box_2
     properties: {visible: true, enabled: true, align: left}
     type: TextBox
@@ -50,6 +73,13 @@ components:
     properties: {}
     type: TextBox
     layout_properties: {grid_position: 'CTITOL,SZRCGY IRNMIK,NFUNUI'}
+  - name: drop_down_3
+    properties:
+      items: [Armin Wagner, Kamel El Omari, Vitaliy Mykhaylyk, Ramona Duman, Christian Orr]
+      include_placeholder: true
+      placeholder: Select 'Armin Wagner' if you are unsure
+    type: DropDown
+    layout_properties: {grid_position: 'CTITOL,SZRCGY EJMKMB,HCCKDR'}
   - name: radio_button_1
     properties: {text: Phasing}
     type: RadioButton
@@ -108,7 +138,7 @@ components:
     layout_properties: {grid_position: 'XNPDCE,CQUJZA'}
     event_bindings: {show: text_box_4_show}
   - name: label_9
-    properties: {text: Morphology}
+    properties: {text: Morphology, align: right}
     type: Label
     layout_properties: {grid_position: 'PGZPGT,QQSTMD'}
   - name: drop_down_1
@@ -117,23 +147,27 @@ components:
     type: DropDown
     layout_properties: {grid_position: 'PGZPGT,CTFPNG'}
   - name: label_11
-    properties: {text: Average Crystal Size}
+    properties: {text: Average Crystal Size, align: right}
     type: Label
     layout_properties: {grid_position: 'BGEZWO,PWLYOQ FLNJIU,FNGBQZ'}
   - name: label_13
-    properties: {text: Crystal Life Time (in MGy)}
+    properties: {text: Crystal Life Time (in MGy), align: right}
     type: Label
     layout_properties: {grid_position: 'BGEZWO,PWLYOQ LDZWKN,DUVQSD'}
   - name: label_14
-    properties: {text: Space Group}
+    properties: {text: Space Group, align: right}
     type: Label
     layout_properties: {grid_position: 'BGEZWO,PWLYOQ FBJNCD,PQPNAE'}
   - name: label_15
-    properties: {text: 'Unit Cell (a, b, c, α, β, γ)'}
+    properties: {text: 'Unit Cell (a, b, c, α, β, γ)', align: right}
     type: Label
     layout_properties: {grid_position: 'BGEZWO,PWLYOQ LPKJJA,QRRYIF'}
+  - name: label_21
+    properties: {text: Molecules per ASU, align: right}
+    type: Label
+    layout_properties: {grid_position: 'BGEZWO,PWLYOQ ABRKCK,HIRDMK'}
   - name: label_16
-    properties: {text: Typical and Highest Resolution}
+    properties: {text: Typical and Highest Resolution, align: right}
     type: Label
     layout_properties: {grid_position: 'BGEZWO,PWLYOQ NZPWPQ,RWHHDY'}
   - name: text_box_5
@@ -149,11 +183,15 @@ components:
     type: DropDown
     layout_properties: {grid_position: 'BGEZWO,WRDEOK YGXZVY,LMAZXX'}
   - name: text_box_8
-    properties: {}
+    properties: {placeholder: 150 150 45 90 90 120}
     type: TextBox
     layout_properties: {grid_position: 'BGEZWO,WRDEOK CGLFRI,TJPZTT'}
+  - name: text_box_12
+    properties: {type: number}
+    type: TextBox
+    layout_properties: {grid_position: 'BGEZWO,WRDEOK WXCVZD,GHPWPB'}
   - name: label_18
-    properties: {text: Typical}
+    properties: {text: Typical, align: right}
     type: Label
     layout_properties: {grid_position: 'BGEZWO,WRDEOK XORTJN,FALRGV'}
   - name: text_box_9
@@ -163,7 +201,7 @@ components:
     data_bindings:
     - {property: type, code: 'self.item['''']', writeback: false}
   - name: label_19
-    properties: {text: Highest}
+    properties: {text: Highest, align: right}
     type: Label
     layout_properties: {grid_position: 'BGEZWO,WRDEOK XORTJN,BLJPNE'}
   - name: text_box_10
@@ -189,8 +227,73 @@ components:
   - name: label_20
     properties: {text: Anomalous Scatterer(s)}
     type: Label
-    layout_properties: {grid_position: 'DNHXPQ,EFSONE'}
+    layout_properties: {grid_position: 'DNHXPQ,EFSONE LFBMNJ,FHYHTK'}
+  - name: label_22
+    properties: {text: Anomalous Scatterers per ASU}
+    type: Label
+    layout_properties: {grid_position: 'DNHXPQ,EFSONE FLLDWM,CSOFOR'}
+  - name: label_23
+    properties: {text: Bound Metal(s) (if any)}
+    type: Label
+    layout_properties: {grid_position: 'DNHXPQ,EFSONE OKAOSJ,QNQACC'}
+  - name: label_25
+    properties: {text: Crystal Pathology}
+    type: Label
+    layout_properties: {grid_position: 'DNHXPQ,EFSONE GGCDAJ,YLZUIE'}
   - name: text_box_11
     properties: {}
     type: TextBox
-    layout_properties: {grid_position: 'DNHXPQ,LDPQLY'}
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY OHCLKQ,XKTTHD'}
+  - name: text_box_13
+    properties: {type: number}
+    type: TextBox
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY GXEKBM,RDISZV'}
+  - name: text_box_14
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY BSQMVO,CMBJGD'}
+  - name: text_box_16
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY ACOYEN,FCPPZP'}
+  - name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'PTHTDF,ZRGONL'}
+  - name: label_26
+    properties: {text: Logistics, align: center}
+    type: Label
+    layout_properties: {grid_position: 'EFMQYB,CAEZOM'}
+  - name: check_box_5
+    properties: {text: Tick if you will bring crystal trays to Diamond to mount samples on the day of the experiment,
+      align: center}
+    type: CheckBox
+    layout_properties: {grid_position: 'NMTTRS,NDEZLB'}
+  - name: label_27
+    properties: {text: Number and Size of Sample Mounts}
+    type: Label
+    layout_properties: {grid_position: 'JGUQEZ,HUVNTA'}
+  - name: text_box_17
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'JGUQEZ,PWELDI'}
+  - name: check_box_6
+    properties: {text: Puck Handling Tools Required}
+    type: CheckBox
+    layout_properties: {grid_position: 'JGUQEZ,AEMMZP'}
+  - name: label_28
+    properties: {text: 'Name, Address and Phone Number'}
+    type: Label
+    layout_properties: {grid_position: 'WAUITD,AETTBX'}
+  - name: text_area_4
+    properties: {height: 181.609375}
+    type: TextArea
+    layout_properties: {grid_position: 'WAUITD,IBQNEQ UHHJUX,HWWMEN'}
+  - name: label_29
+    properties: {text: EORI Number, align: right}
+    type: Label
+    layout_properties: {grid_position: 'WAUITD,IBQNEQ OXAQDO,MBFVWG'}
+  - name: text_box_18
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'WAUITD,IBQNEQ OXAQDO,GNDNGA'}
