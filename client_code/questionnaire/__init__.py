@@ -40,3 +40,13 @@ class questionnaire(questionnaireTemplate):
       self.address.enabled = True
       self.EORI.enabled = True
     pass
+
+  def ligandRadio_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    if self.ligandRadio.selected:
+      self.ligandCheckBox.checked = True
+    pass
+
+  def reset_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
