@@ -1,5 +1,6 @@
 import anvil.email
 import anvil.server
+import smtplib
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.

@@ -5,7 +5,8 @@ services:
   server_config: {}
 - source: /runtime/services/anvil/email.yml
   client_config: {}
-  server_config: {custom_smtp: true}
+  server_config: {custom_smtp: false, test_mode: false, smtp_host: exchsmtp.stfc.ac.uk,
+    smtp_port: 25, smtp_encryption: '', smtp_user: vwg85559}
 startup: {type: form, module: questionnaire}
 package_name: I23_Questionnaire
 allow_embedding: false

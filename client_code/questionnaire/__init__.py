@@ -2,7 +2,6 @@ from ._anvil_designer import questionnaireTemplate
 from anvil import *
 import anvil.server
 
-
 class questionnaire(questionnaireTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
