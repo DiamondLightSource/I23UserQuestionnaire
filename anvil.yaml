@@ -1,10 +1,3 @@
-allow_embedding: false
-package_name: I23_Questionnaire
-startup: {type: form, module: questionnaire}
-name: I23 Questionnaire
-startup_form: null
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
@@ -13,3 +6,12 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {custom_smtp: true}
+startup: {type: form, module: questionnaire}
+package_name: I23_Questionnaire
+allow_embedding: false
+name: I23 Questionnaire
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+metadata: {title: I23 Questionnaire, description: Provide information to help the I23 team assess and plan your experiment,
+  logo_img: 'asset:70s_image.jpg'}
+startup_form: null
