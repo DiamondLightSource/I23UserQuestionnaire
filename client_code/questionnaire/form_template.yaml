@@ -98,7 +98,7 @@ components:
     type: RadioButton
     layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,APONBZ'}
   - name: ligandRadio
-    properties: {text: Ligand Highlight, tooltip: Use anomalous difference Fourier maps to highlight heavy ions in ligands to assist in placement}
+    properties: {text: Ligand Highlight, tooltip: Use anomalous difference Fourier maps to highlight anomalous scatterers in ligands to assist in placement}
     type: RadioButton
     layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,HYMJET'}
     event_bindings: {clicked: ligandRadio_clicked}
