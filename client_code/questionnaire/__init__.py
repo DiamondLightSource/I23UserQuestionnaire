@@ -1,6 +1,7 @@
 from ._anvil_designer import questionnaireTemplate
 from anvil import *
 import anvil.server
+import pickle
 
 class questionnaire(questionnaireTemplate):
   def __init__(self, **properties):
@@ -49,3 +50,9 @@ class questionnaire(questionnaireTemplate):
   def reset_click(self, **event_args):
     """This method is called when the button is clicked"""
     pass
+
+  def submit_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if self.submit.
+    pass
+
