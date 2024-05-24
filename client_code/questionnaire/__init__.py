@@ -53,6 +53,11 @@ class questionnaire(questionnaireTemplate):
 
   def submit_click(self, **event_args):
     """This method is called when the button is clicked"""
-    if self.submit.
+    
     pass
 
+  def collectnpickle(self):
+    data = {
+      'address': self.address.text,
+      
+    }
