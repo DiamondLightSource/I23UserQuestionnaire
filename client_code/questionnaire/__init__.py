@@ -1,7 +1,6 @@
 from ._anvil_designer import questionnaireTemplate
 from anvil import *
 import anvil.server
-import pickle
 
 class questionnaire(questionnaireTemplate):
   def __init__(self, **properties):
@@ -53,11 +52,13 @@ class questionnaire(questionnaireTemplate):
 
   def submit_click(self, **event_args):
     """This method is called when the button is clicked"""
-    
+    self.collectnpickle()
+    anvil.server.call("recieveData", self.data)
     pass
 
   def collectnpickle(self):
-    data = {
+    self.data = {
       'address': self.address.text,
       'anomalous scatterer': self.anomScatterer.text,
+      'EORI': self.EORI.text,
     }
