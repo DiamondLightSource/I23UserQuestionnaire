@@ -59,5 +59,5 @@ class questionnaire(questionnaireTemplate):
   def collectnpickle(self):
     data = {
       'address': self.address.text,
-      
+      'anomalous scatterer': self.anomScatterer.text,
     }
