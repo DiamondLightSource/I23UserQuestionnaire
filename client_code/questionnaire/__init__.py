@@ -53,11 +53,11 @@ class questionnaire(questionnaireTemplate):
 
   def submit_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.collectnpickle()
+    self.collectnsend()
     anvil.server.call("recieveData", self.data)
     pass
 
-  def collectnpickle(self):
+  def collectnsend(self):
     self.data = {
       'name': self.name.text,
       'email': self.email.text,
