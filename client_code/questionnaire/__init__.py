@@ -67,6 +67,15 @@ class questionnaire(questionnaireTemplate):
       'experiment type': self.experimentType,
       'protein name': self.protein.text,
       'sequence': self.sequence.text,
+      'conditions': self.crystallisationConditions.text,
+      'LCP': self.lcpCheckBox.checked,
+      'cryo needed': self.cryoprotectantCheckBox.checked,
+      'cryoprotectant': self.cryoprotectant.text,
+      'morphology': self.morphology.selected_value,
+      'size': self.crystalSize.text,
+      'space group': self.spaceGroup.selected_value,
+      'unit cell': self.unitCell.text,
+      'molecules per ASU': self.molPerASU.text,
       
     }
 
