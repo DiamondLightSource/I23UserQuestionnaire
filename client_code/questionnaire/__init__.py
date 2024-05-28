@@ -76,7 +76,12 @@ class questionnaire(questionnaireTemplate):
       'space group': self.spaceGroup.selected_value,
       'unit cell': self.unitCell.text,
       'molecules per ASU': self.molPerASU.text,
-      'typical resolution'
+      'typical resolution': self.typicalRes.text,
+      'high resolution': self.highRes.text,
+      'isomorphous': self.isomorphousCheckBox.checked,
+      'ligand': self.ligandCheckBox.checked,
+      'scatterers': self.anomScatterer.text,
+      
     }
 
   def phasingRadio_clicked(self, **event_args):
@@ -89,4 +94,8 @@ class questionnaire(questionnaireTemplate):
 
   def otherRadio_clicked(self, **event_args):
     self.experimentType = 'other'
+    pass
+
+  def check_box_1_change(self, **event_args):
+    
     pass

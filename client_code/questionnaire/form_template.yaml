@@ -267,6 +267,7 @@ components:
     properties: {text: tNCS}
     type: CheckBox
     layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,DSBZFT ZMMOTK,CTAFAO'}
+    event_bindings: {change: check_box_1_change}
   - name: check_box_4
     properties: {text: check_box_4}
     type: CheckBox
