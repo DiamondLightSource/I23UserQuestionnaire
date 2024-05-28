@@ -69,7 +69,8 @@ class questionnaire(questionnaireTemplate):
       'sequence': self.sequence.text,
       'conditions': self.crystallisationConditions.text,
       'LCP': self.lcpCheckBox.checked,
-      'cryo': self.
+      'cryo needed': self.cryoprotectantCheckBox.checked,
+      'cryop'
     }
 
   def phasingRadio_clicked(self, **event_args):
