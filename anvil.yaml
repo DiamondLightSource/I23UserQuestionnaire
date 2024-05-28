@@ -12,7 +12,7 @@ services:
     smtp_port: 25, smtp_encryption: '', smtp_user: vwg85559}
 startup: {type: form, module: questionnaire}
 package_name: I23_Questionnaire
-allow_embedding: false
+allow_embedding: true
 name: I23 Questionnaire
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}

@@ -1,6 +1,7 @@
 from ._anvil_designer import questionnaireTemplate
 from anvil import *
 import anvil.server
+import Yosoku
 
 class questionnaire(questionnaireTemplate):
   def __init__(self, **properties):
@@ -9,7 +10,7 @@ class questionnaire(questionnaireTemplate):
     self.experimentType = 'not specified'
 
     # Any code you write here will run before the form opens.
-
+  
   def cryoprotectant_show(self, **event_args):
     """This method is called when the TextBox is shown on the screen"""
     pass
