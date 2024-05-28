@@ -54,8 +54,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB UTLHYH,FPTUTN'}
   - name: label_30
-    properties: {text: I23 Local Contact, align: right, tooltip: 'The name of the
-        person you have had contact with on I23, if any'}
+    properties: {text: I23 Contact, align: right, tooltip: 'The name of the person
+        you have had contact with on I23, if any'}
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB RHHRNT,BKOZLJ'}
   - name: label_5
@@ -90,23 +90,22 @@ components:
     type: DropDown
     layout_properties: {grid_position: 'CTITOL,SZRCGY EJMKMB,HCCKDR'}
   - name: phasingRadio
-    properties: {text: Phasing, tooltip: Obtain phases using SAD or MAD from native or non-native elements}
+    properties: {text: Phasing, tooltip: Obtain phases using SAD or MAD from native or non-native elements,
+      selected: false}
     type: RadioButton
     layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,HAEOBH'}
+    event_bindings: {clicked: phasingRadio_clicked}
   - name: ionRadio
-    properties: {text: Ion Identification, tooltip: Identify important ions bound to your protein or intrinsic to it}
+    properties: {text: Element Identification, tooltip: Identify important ions bound to your protein or intrinsic to it}
     type: RadioButton
     layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,APONBZ'}
-  - name: ligandRadio
-    properties: {text: Ligand Highlight, tooltip: Use anomalous difference Fourier maps to highlight anomalous scatterers in ligands to assist in placement}
-    type: RadioButton
-    layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,HYMJET'}
-    event_bindings: {clicked: ligandRadio_clicked}
+    event_bindings: {clicked: ionRadio_clicked}
   - name: otherRadio
     properties: {text: Other, tooltip: 'Anything else, we''re always open to trying
         new experiments!'}
     type: RadioButton
     layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,PXRQNH'}
+    event_bindings: {clicked: otherRadio_clicked}
   - name: label_6
     properties: {text: Protein Name, align: right, tooltip: Protein identifier}
     type: Label
@@ -171,11 +170,6 @@ components:
         approximate'}
     type: Label
     layout_properties: {grid_position: 'BGEZWO,PWLYOQ FLNJIU,FNGBQZ'}
-  - name: label_13
-    properties: {text: Crystal Life Time (in MGy), align: right, tooltip: 'How much
-        radiation damage can the crystal stand before it shows obvious signs in diffraction. '}
-    type: Label
-    layout_properties: {grid_position: 'BGEZWO,PWLYOQ LDZWKN,DUVQSD'}
   - name: label_14
     properties: {text: Space Group, align: right}
     type: Label
@@ -197,10 +191,6 @@ components:
     properties: {tooltip: eg. 120 x 60 x 60}
     type: TextBox
     layout_properties: {grid_position: 'BGEZWO,WRDEOK FYNMKU,ELIMLW'}
-  - name: crystalLifeTime
-    properties: {tooltip: eg. 15MGy}
-    type: TextBox
-    layout_properties: {grid_position: 'BGEZWO,WRDEOK HARGRU,GATTHO'}
   - name: spaceGroup
     properties:
       tooltip: If you have a small molecule with a space group not listed, select Unknown
@@ -260,39 +250,39 @@ components:
     type: Label
     layout_properties: {grid_position: 'LXLKSI,ZEEZEW'}
   - name: label_20
-    properties: {text: Anomalous Scatterer(s), align: right, tooltip: 'The scatterers
-        in your protein. S usually present. Additionally may have Cl, Ca, K etc bound
-        to sites.'}
+    properties: {text: Anomalous Scatterer(s) Including Bound Metals, align: right,
+      tooltip: 'The scatterers in your protein. S usually present. Additionally may
+        have Cl, Ca, K etc bound to sites.', bold: false}
     type: Label
     layout_properties: {grid_position: 'DNHXPQ,EFSONE LFBMNJ,FHYHTK'}
-  - name: label_22
-    properties: {text: Anomalous Scatterers per ASU, align: right, tooltip: Approximately how many scatterers are in the asymmetric unit}
-    type: Label
-    layout_properties: {grid_position: 'DNHXPQ,EFSONE FLLDWM,CSOFOR'}
-  - name: label_23
-    properties: {text: Bound Metal(s) (if any), align: right, tooltip: metal atoms bound to the protein}
-    type: Label
-    layout_properties: {grid_position: 'DNHXPQ,EFSONE OKAOSJ,QNQACC'}
   - name: label_25
     properties: {text: Crystal Pathology, align: right, tooltip: Does your crystal exhibit any pathologies in processing}
     type: Label
-    layout_properties: {grid_position: 'DNHXPQ,EFSONE GGCDAJ,YLZUIE'}
+    layout_properties: {grid_position: 'DNHXPQ,EFSONE GTVYKV,MNMGAI'}
   - name: anomScatterer
     properties: {tooltip: 'eg. S, P, Cl, K'}
     type: TextBox
-    layout_properties: {grid_position: 'DNHXPQ,LDPQLY OHCLKQ,XKTTHD'}
-  - name: scattererPerASU
-    properties: {type: number, tooltip: eg. 33}
-    type: TextBox
-    layout_properties: {grid_position: 'DNHXPQ,LDPQLY GXEKBM,RDISZV'}
-  - name: metals
-    properties: {tooltip: 'eg. Fe, Ni'}
-    type: TextBox
-    layout_properties: {grid_position: 'DNHXPQ,LDPQLY BSQMVO,CMBJGD'}
-  - name: pathology
-    properties: {text: '', tooltip: 'eg. twinning, tNCS etc.'}
-    type: TextBox
-    layout_properties: {grid_position: 'DNHXPQ,LDPQLY ACOYEN,FCPPZP'}
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY DJOCUK,TSRNQB'}
+  - name: check_box_1
+    properties: {text: tNCS}
+    type: CheckBox
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,DSBZFT ZMMOTK,CTAFAO'}
+  - name: check_box_4
+    properties: {text: check_box_4}
+    type: CheckBox
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,DSBZFT CMXOXN,MQVSRW'}
+  - name: check_box_2
+    properties: {text: check_box_2}
+    type: CheckBox
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,HMZTYA DCHCLV,XBXIWW'}
+  - name: check_box_5
+    properties: {text: check_box_5}
+    type: CheckBox
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,HMZTYA ZMMDOX,ZWNBVF'}
+  - name: check_box_3
+    properties: {text: check_box_3}
+    type: CheckBox
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,KNREZQ'}
   - name: spacer_3
     properties: {height: 32}
     type: Spacer
