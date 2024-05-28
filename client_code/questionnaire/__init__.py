@@ -56,7 +56,24 @@ class questionnaire(questionnaireTemplate):
     self.sequence.text = ''
     self.crystallisationConditions.text = ''
     self.cryoprotectantCheckBox.checked = False
+    self.cryoprotectant.text = ''
     self.crystalSize.text = ''
+    self.spaceGroup.selected_value = 'P1'
+    self.unitCell.text = ''
+    self.molPerASU.text = ''
+    self.typicalRes.text = ''
+    self.highRes.text = ''
+    self.isomorphousCheckBox.checked = False
+    self.ligandCheckBox.checked = False
+    self.anomScatterer.text = ''
+    self.tNCSCheck.checked = False
+    self.twinnedCheck.checked = False
+    self.LTDCheck.checked = False
+    self.anisoCheck.checked = False
+    self.multilatticeCheck.checked = False
+    self.localMountCheckBox.checked = False
+    self.mountsSize = ''
+    self.handingToolsCheckBox.checked = False
     
     pass
 
