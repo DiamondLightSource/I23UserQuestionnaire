@@ -81,6 +81,7 @@ class questionnaire(questionnaireTemplate):
       'isomorphous': self.isomorphousCheckBox.checked,
       'ligand': self.ligandCheckBox.checked,
       'scatterers': self.anomScatterer.text,
+      'pathologies': [self.tNCSCheck.checked, self.twinnedCheck.checked, self.LTDCheck.checked, self.anisoCheck.checked, self.multilatticeCheck.checked],
       
     }
 
@@ -96,6 +97,3 @@ class questionnaire(questionnaireTemplate):
     self.experimentType = 'other'
     pass
 
-  def check_box_1_change(self, **event_args):
-    
-    pass
