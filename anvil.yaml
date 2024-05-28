@@ -1,4 +1,7 @@
-dependencies: []
+dependencies:
+- dep_id: dep_544mxf3vminfl
+  version: {dev: false}
+  resolution_hints: {app_id: VLHZXVIKFTEZ6F35, name: Yosoku, package_name: Yosoku}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
