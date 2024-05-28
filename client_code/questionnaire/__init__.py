@@ -48,7 +48,16 @@ class questionnaire(questionnaireTemplate):
     pass
 
   def reset_click(self, **event_args):
-    """This method is called when the button is clicked"""
+    self.name.text = ''
+    self.email.text = ''
+    self.group.text = ''
+    self.BAG.text = ''
+    self.protein.text = ''
+    self.sequence.text = ''
+    self.crystallisationConditions.text = ''
+    self.cryoprotectantCheckBox.checked = False
+    self.crystalSize.text = ''
+    
     pass
 
   def submit_click(self, **event_args):
@@ -82,7 +91,11 @@ class questionnaire(questionnaireTemplate):
       'ligand': self.ligandCheckBox.checked,
       'scatterers': self.anomScatterer.text,
       'pathologies': [self.tNCSCheck.checked, self.twinnedCheck.checked, self.LTDCheck.checked, self.anisoCheck.checked, self.multilatticeCheck.checked],
-      
+      'local mounting': self.localMountCheckBox.checked,
+      'mounts': self.mountsSize.text,
+      'tools': self.handingToolsCheckBox.checked,
+      'contact': self.address.text,
+      'EORI': self.EORI.text,
     }
 
   def phasingRadio_clicked(self, **event_args):
