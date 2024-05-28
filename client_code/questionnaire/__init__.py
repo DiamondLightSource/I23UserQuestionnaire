@@ -67,7 +67,9 @@ class questionnaire(questionnaireTemplate):
       'experiment type': self.experimentType,
       'protein name': self.protein.text,
       'sequence': self.sequence.text,
-      
+      'conditions': self.crystallisationConditions.text,
+      'LCP': self.lcpCheckBox.checked,
+      'cryo': self.
     }
 
   def phasingRadio_clicked(self, **event_args):

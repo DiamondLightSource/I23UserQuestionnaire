@@ -258,7 +258,7 @@ components:
   - name: label_25
     properties: {text: Crystal Pathology, align: right, tooltip: Does your crystal exhibit any pathologies in processing}
     type: Label
-    layout_properties: {grid_position: 'DNHXPQ,EFSONE GTVYKV,MNMGAI'}
+    layout_properties: {grid_position: 'DNHXPQ,EFSONE JGKAHG,GVEVLQ'}
   - name: anomScatterer
     properties: {tooltip: 'eg. S, P, Cl, K'}
     type: TextBox
@@ -266,23 +266,35 @@ components:
   - name: check_box_1
     properties: {text: tNCS}
     type: CheckBox
-    layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,DSBZFT ZMMOTK,CTAFAO'}
-  - name: check_box_4
-    properties: {text: check_box_4}
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,DSBZFT OBKDGI,OENOBT'}
+  - name: check_box_5
+    properties: {text: Anisotropic}
     type: CheckBox
-    layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,DSBZFT CMXOXN,MQVSRW'}
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,DSBZFT FOSETM,LMDKHG'}
   - name: check_box_2
     properties: {text: Multiple Lattice}
     type: CheckBox
     layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,HMZTYA DCHCLV,XBXIWW'}
-  - name: check_box_5
-    properties: {text: check_box_5}
+  - name: check_box_4
+    properties: {text: Lattice Translational Disorder}
     type: CheckBox
-    layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,HMZTYA ZMMDOX,ZWNBVF'}
+    layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,HMZTYA ZMMDOX,WLGLNP'}
   - name: check_box_3
-    properties: {text: check_box_3}
+    properties: {text: Twinning}
     type: CheckBox
     layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,KNREZQ'}
+  - name: label_13
+    properties: {text: Associated PDB File, align: right}
+    type: Label
+    layout_properties: {grid_position: 'HHJNOL,IDVZAA'}
+  - name: text_box_1
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'HHJNOL,AMNPIT'}
+  - name: file_loader_1
+    properties: {text: PDB}
+    type: FileLoader
+    layout_properties: {grid_position: 'HHJNOL,BUABDQ'}
   - name: spacer_3
     properties: {height: 32}
     type: Spacer
