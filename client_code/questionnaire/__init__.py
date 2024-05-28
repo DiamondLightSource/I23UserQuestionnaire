@@ -6,6 +6,7 @@ class questionnaire(questionnaireTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.experimentType = 'not specified'
 
     # Any code you write here will run before the form opens.
 
@@ -58,7 +59,25 @@ class questionnaire(questionnaireTemplate):
 
   def collectnpickle(self):
     self.data = {
-      'address': self.address.text,
-      'anomalous scatterer': self.anomScatterer.text,
-      'EORI': self.EORI.text,
+      'name': self.name.text,
+      'email': self.email.text,
+      'group': self.group.text,
+      'BAG': self.BAG.text,
+      'I23 contact': self.I23LC.selected_value,
+      'experiment type': self.experimentType,
+      'protein name': self.protein.text,
+      'sequence': self.sequence.text,
+      
     }
+
+  def phasingRadio_clicked(self, **event_args):
+    self.experimentType = 'phasing'
+    pass
+
+  def ionRadio_clicked(self, **event_args):
+    self.experimentType = 'ion identification'
+    pass
+
+  def otherRadio_clicked(self, **event_args):
+    self.experimentType = 'other'
+    pass
