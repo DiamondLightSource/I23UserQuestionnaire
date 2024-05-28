@@ -72,7 +72,7 @@ class questionnaire(questionnaireTemplate):
     self.anisoCheck.checked = False
     self.multilatticeCheck.checked = False
     self.localMountCheckBox.checked = False
-    self.mountsSize = ''
+    self.mountsSize.text = ''
     self.handingToolsCheckBox.checked = False
     self.address.text = ''
     self.EORI.text = ''

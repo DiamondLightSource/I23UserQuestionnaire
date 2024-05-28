@@ -232,7 +232,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'BGEZWO,WRDEOK XORTJN,LPDGAF'}
   - name: isomorphousCheckBox
-    properties: {text: Isomorphous, align: center, checked: true, tooltip: 'Are your
+    properties: {text: Isomorphous, align: center, checked: false, tooltip: 'Are your
         crystals generally the same, eg. they diffract to the same resolution with
         the same unit cells etc. '}
     type: CheckBox
@@ -267,7 +267,7 @@ components:
     properties: {text: tNCS}
     type: CheckBox
     layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,DSBZFT ZMMOTK,CTAFAO'}
-    event_bindings: {change: tNCSCheck_change}
+    event_bindings: {}
   - name: anisoCheck
     properties: {text: Anisotropic}
     type: CheckBox
