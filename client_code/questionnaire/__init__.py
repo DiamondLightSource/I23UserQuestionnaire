@@ -73,7 +73,9 @@ class questionnaire(questionnaireTemplate):
     self.multilatticeCheck.checked = False
     self.localMountCheckBox.checked = False
     self.mountsSize = ''
-    self.handingToolsCheckBox.checked = F
+    self.handingToolsCheckBox.checked = False
+    self.address.text = ''
+    self.EORI.text = ''
     pass
 
   def submit_click(self, **event_args):
