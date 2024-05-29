@@ -115,6 +115,8 @@ class questionnaire(questionnaireTemplate):
       'tools': self.handingToolsCheckBox.checked,
       'contact': self.address.text,
       'EORI': self.EORI.text,
+      'pdb code': self.PDBcode.text,
+      'pdb file': self.PDBfile.file,
     }
 
   def phasingRadio_clicked(self, **event_args):
@@ -127,5 +129,9 @@ class questionnaire(questionnaireTemplate):
 
   def otherRadio_clicked(self, **event_args):
     self.experimentType = 'other'
+    pass
+
+  def PDBfile_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
     pass
 

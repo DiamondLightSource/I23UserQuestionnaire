@@ -284,6 +284,19 @@ components:
     properties: {text: Lattice Translational Disorder}
     type: CheckBox
     layout_properties: {grid_position: 'DNHXPQ,LDPQLY XWUYUO,KNREZQ'}
+  - name: label_13
+    properties: {text: PDB Code of File, align: right}
+    type: Label
+    layout_properties: {grid_position: 'GKYJLB,CZLKBD'}
+  - name: PDBcode
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'GKYJLB,HPDJUU'}
+  - name: PDBfile
+    properties: {text: PDB}
+    type: FileLoader
+    layout_properties: {grid_position: 'GKYJLB,IEDTHN'}
+    event_bindings: {change: PDBfile_change}
   - name: spacer_3
     properties: {height: 32}
     type: Spacer
