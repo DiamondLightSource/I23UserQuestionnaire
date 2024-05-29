@@ -76,7 +76,6 @@ class questionnaire(questionnaireTemplate):
     pass
 
   def submit_click(self, **event_args):
-    """This method is called when the button is clicked"""
     self.collectnsend()
     anvil.server.call("recieveData", self.data)
     if self.selected_file:
@@ -138,7 +137,8 @@ class questionnaire(questionnaireTemplate):
             return
 
         max_size_mb = 5
-        if file.get_bytes().decode('utf-8') > max_size_mb * 1024 * 1024:
+        file_size_in_bytes = len(file.get_bytes())
+        if file_size_in_bytes > max_size_mb * 1024 * 1024:
             alert("File size exceeds the limit of 5 MB. Please upload a smaller file or contact the I23 team.")
             self.selected_file = None
             return
