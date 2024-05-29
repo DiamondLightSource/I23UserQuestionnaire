@@ -77,10 +77,11 @@ class questionnaire(questionnaireTemplate):
 
   def submit_click(self, **event_args):
     self.collectnsend()
-    anvil.server.call("recieveData", self.data)
     if self.selected_file:
       anvil.server.call('uploadPDB', self.selected_file)
+    anvil.server.call("recieveData", self.data)
     pass
+
 
   def collectnsend(self):
     self.data = {
