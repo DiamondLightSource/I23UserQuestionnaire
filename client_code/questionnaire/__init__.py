@@ -110,13 +110,12 @@ class questionnaire(questionnaireTemplate):
       'ligand': self.ligandCheckBox.checked,
       'scatterers': self.anomScatterer.text,
       'pathologies': [self.tNCSCheck.checked, self.twinnedCheck.checked, self.LTDCheck.checked, self.anisoCheck.checked, self.multilatticeCheck.checked],
+      'pdb code': self.PDBcode.text,
       'local mounting': self.localMountCheckBox.checked,
       'mounts': self.mountsSize.text,
       'tools': self.handingToolsCheckBox.checked,
       'contact': self.address.text,
       'EORI': self.EORI.text,
-      'pdb code': self.PDBcode.text,
-      'pdb file': self.PDBfile.file,
     }
 
   def phasingRadio_clicked(self, **event_args):
