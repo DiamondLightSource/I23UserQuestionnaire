@@ -5,19 +5,16 @@ import Yosoku
 
 class questionnaire(questionnaireTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.experimentType = 'not specified'
     self.selected_file = None
 
-    # Any code you write here will run before the form opens.
   
   def cryoprotectant_show(self, **event_args):
     """This method is called when the TextBox is shown on the screen"""
     pass
 
   def cryoprotectantCheckBox_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
     if self.cryoprotectantCheckBox.checked:
       self.cryoprotectant.enabled = True
     elif not self.cryoprotectantCheckBox.checked:
@@ -26,7 +23,6 @@ class questionnaire(questionnaireTemplate):
     pass
 
   def localMountCheckBox_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
     if self.localMountCheckBox.checked:
       self.mountsSize.text = ""
       self.mountsSize.enabled = False
@@ -44,7 +40,6 @@ class questionnaire(questionnaireTemplate):
     pass
 
   def ligandRadio_clicked(self, **event_args):
-    """This method is called when this radio button is selected"""
     if self.ligandRadio.selected:
       self.ligandCheckBox.checked = True
     pass
