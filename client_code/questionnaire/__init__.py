@@ -8,6 +8,7 @@ class questionnaire(questionnaireTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.experimentType = 'not specified'
+    self.selected_file = None
 
     # Any code you write here will run before the form opens.
   
@@ -83,6 +84,8 @@ class questionnaire(questionnaireTemplate):
     """This method is called when the button is clicked"""
     self.collectnsend()
     anvil.server.call("recieveData", self.data)
+    if self.selected_file:
+      anvil.server.call('uploadPDB', self.selected_file)
     pass
 
   def collectnsend(self):
@@ -131,6 +134,21 @@ class questionnaire(questionnaireTemplate):
     pass
 
   def PDBfile_change(self, file, **event_args):
-    """This method is called when a new file is loaded into this FileLoader"""
+    if file:
+        valid_extensions = ['.pdb', '.cif']
+        file_name = file.name
+        if not any(file_name.endswith(ext) for ext in valid_extensions):
+            alert("Invalid file type. Please upload a .pdb or .cif file.")
+            self.selected_file = None
+            return
+
+        max_size_mb = 5
+        if file.get_bytes().decode('utf-8') > max_size_mb * 1024 * 1024:
+            alert("File size exceeds the limit of 5 MB. Please upload a smaller file or contact the I23 team.")
+            self.selected_file = None
+            return
+
+        self.selected_file = file
+        alert("File selected: " + file.name)
     pass
 
