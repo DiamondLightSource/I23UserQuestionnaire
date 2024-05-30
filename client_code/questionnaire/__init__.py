@@ -76,13 +76,26 @@ class questionnaire(questionnaireTemplate):
     pass
 
   def submit_click(self, **event_args):
+    self.pathologies()
     self.collectnsend()
     if self.selected_file:
       anvil.server.call('uploadPDB', self.selected_file)
     anvil.server.call("recieveData", self.data)
     pass
 
-
+  def pathologies(self):
+    self.pathologyString = ""
+    if self.tNCSCheck.checked:
+      self.pathologyString += "tNCS "
+    if self.twinnedCheck.checked:
+      self.pathologyString += "twinned "
+    if self.LTDCheck.checked:
+      self.pathologyString += "LTD "
+    if self.anisoCheck.checked:
+      self.pathologyString += "anisotropy "
+    if self.multilatticeCheck.checked:
+      self.pathologyString += "multi-lattice"
+    
   def collectnsend(self):
     self.data = {
       'name': self.name.text,
@@ -107,7 +120,7 @@ class questionnaire(questionnaireTemplate):
       'isomorphous': self.isomorphousCheckBox.checked,
       'ligand': self.ligandCheckBox.checked,
       'scatterers': self.anomScatterer.text,
-      'pathologies': [self.tNCSCheck.checked, self.twinnedCheck.checked, self.LTDCheck.checked, self.anisoCheck.checked, self.multilatticeCheck.checked],
+      'pathologies': self.pathologyString,
       'pdb code': self.PDBcode.text,
       'local mounting': self.localMountCheckBox.checked,
       'mounts': self.mountsSize.text,
