@@ -27,7 +27,8 @@ components:
 
           By submitting this form, you agree that the I23 team at Diamond Light Source
           are able to look over the provided data to judge project feasibility and
-          help with planning your experiment. ', height: 119.04296875, enabled: true}
+          help with planning your experiment. This information is confidential and
+          will only be seen by beamline staff.', height: 119.04296875, enabled: true}
       type: TextArea
       layout_properties: {grid_position: 'XXPWCH,XHOJRU'}
   - name: label_3
@@ -123,7 +124,7 @@ components:
     type: TextArea
     layout_properties: {grid_position: 'NETSCX,PAZVWM'}
   - name: spacer_1
-    properties: {height: 32}
+    properties: {height: 49.4375}
     type: Spacer
     layout_properties: {grid_position: 'ZJDTWE,BINNCC'}
   - name: label_10
@@ -160,8 +161,7 @@ components:
     layout_properties: {grid_position: 'PGZPGT,QQSTMD'}
   - name: morphology
     properties:
-      items: [Cube, Rod, Plate, Needle, Pyrimidal, Bi-pyrimidal, Sphere, Blob, Smoosh,
-        Other]
+      items: [Cube, Rod, Plate, Needle, Pyrimidal, Bi-pyrimidal, Sphere, Other]
       tooltip: Select the closest match to your crystal morphology. Select sphere if we are laser shaping them.
     type: DropDown
     layout_properties: {grid_position: 'PGZPGT,CTFPNG'}
@@ -205,7 +205,7 @@ components:
     type: DropDown
     layout_properties: {grid_position: 'BGEZWO,WRDEOK YGXZVY,LMAZXX'}
   - name: unitCell
-    properties: {placeholder: 150 150 45 90 90 120}
+    properties: {placeholder: 150 150 45 90 90 120, type: number}
     type: TextBox
     layout_properties: {grid_position: 'BGEZWO,WRDEOK CGLFRI,TJPZTT'}
   - name: molPerASU
@@ -221,8 +221,7 @@ components:
     properties: {type: number, hide_text: false, tooltip: eg. 2.7}
     type: TextBox
     layout_properties: {grid_position: 'BGEZWO,WRDEOK XORTJN,HLUGXW'}
-    data_bindings:
-    - {property: type, code: 'self.item['''']', writeback: false}
+    data_bindings: []
   - name: label_19
     properties: {text: Highest, align: right, tooltip: The highest resolution you have obtained from these crystals}
     type: Label
@@ -260,7 +259,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'DNHXPQ,EFSONE GTVYKV,MNMGAI'}
   - name: anomScatterer
-    properties: {tooltip: 'eg. S, P, Cl, K'}
+    properties: {tooltip: 'eg. S, P, Cl, K', type: number}
     type: TextBox
     layout_properties: {grid_position: 'DNHXPQ,LDPQLY DJOCUK,TSRNQB'}
   - name: tNCSCheck
@@ -298,7 +297,7 @@ components:
     layout_properties: {grid_position: 'GKYJLB,IEDTHN'}
     event_bindings: {change: PDBfile_change}
   - name: spacer_3
-    properties: {height: 32}
+    properties: {height: 55.80078125}
     type: Spacer
     layout_properties: {grid_position: 'PTHTDF,ZRGONL'}
   - name: label_26
