@@ -25,12 +25,15 @@ components:
           form or I23 in general, please email armin.wagner@diamond.ac.uk.
 
 
-          By submitting this form, you agree that the I23 team at Diamond Light Source
-          are able to look over the provided data to judge project feasibility and
-          help with planning your experiment. This information is confidential and
-          will only be seen by beamline staff.', height: 119.04296875, enabled: true}
+          The information you provide in the form will be available to the I23 beamline
+          team at Diamond to help with planning your experiment. Any personal data
+          submitted in this form will be processed in accordance with Diamond’s Privacy
+          Notice available at: https://www.diamond.ac.uk/Home/Legal-and-Compliance/Privacy-Notice-.html.',
+        height: 175.6015625, enabled: true, auto_expand: false, bold: false, italic: false,
+        underline: false}
       type: TextArea
       layout_properties: {grid_position: 'XXPWCH,XHOJRU'}
+      data_bindings: []
   - name: label_3
     properties: {text: Basic Info, align: center, bold: true}
     type: Label
