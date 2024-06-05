@@ -76,6 +76,7 @@ class questionnaire(questionnaireTemplate):
     pass
 
   def submit_click(self, **event_args):
+    anvil.server.call("cleanUp")
     self.pathologies()
     self.collectnsend()
     if self.selected_file:

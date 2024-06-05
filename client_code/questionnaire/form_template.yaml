@@ -39,12 +39,12 @@ components:
     type: Label
     layout_properties: {grid_position: 'MVOHEH,BPQIVA'}
   - name: label_1
-    properties: {text: Name, align: right, tooltip: 'Your name, or the name of the
-        project contact if completing this form on behalf of someone else'}
+    properties: {text: '*Name', align: right, tooltip: 'Your name, or the name of
+        the project contact if completing this form on behalf of someone else'}
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB UNYDXN,DNZDMO', full_width_row: false}
   - name: label_24
-    properties: {text: Email, align: right, tooltip: Your email. A copy of this form will be sent to this address.}
+    properties: {text: '*Email', align: right, tooltip: Your email. A copy of this form will be sent to this address.}
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB IOPBNU,VFQEVD'}
   - name: label_2
@@ -63,7 +63,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB RHHRNT,BKOZLJ'}
   - name: label_5
-    properties: {text: Experiment Type, align: right, tooltip: The type of experiment you would like to perform on I23. Choose 'other' for experiments such as SPRED}
+    properties: {text: '*Experiment Type', align: right, tooltip: The type of experiment you would like to perform on I23. Choose 'other' for experiments such as SPRED}
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB NGPVIF,OSGJUK'}
   - name: name
@@ -111,7 +111,7 @@ components:
     layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,PXRQNH'}
     event_bindings: {clicked: otherRadio_clicked}
   - name: label_6
-    properties: {text: Protein Name, align: right, tooltip: Protein identifier}
+    properties: {text: '*Protein Name', align: right, tooltip: Protein identifier}
     type: Label
     layout_properties: {grid_position: 'PWSEXD,JENBBH'}
   - name: protein
