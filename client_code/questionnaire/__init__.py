@@ -77,13 +77,15 @@ class questionnaire(questionnaireTemplate):
 
   def submit_click(self, **event_args):
     anvil.server.call("cleanUp")
-    if self.name.text == None
-    self.pathologies()
-    self.collectnsend()
-    if self.selected_file:
-      anvil.server.call('uploadPDB', self.selected_file)
-    anvil.server.call("recieveData", self.data)
-    pass
+    if (self.name.text is None) or (self.email.text is None) or (self.protein.text is None):
+      alert("Ensure Name, Email and Protein Name are supplied.")
+    else:
+      self.pathologies()
+      self.collectnsend()
+      if self.selected_file:
+        anvil.server.call('uploadPDB', self.selected_file)
+      anvil.server.call("recieveData", self.data)
+      pass
 
   def pathologies(self):
     self.pathologyString = ""
