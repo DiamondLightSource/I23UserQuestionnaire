@@ -29,7 +29,7 @@ components:
           team at Diamond to help with planning your experiment. Any personal data
           submitted in this form will be processed in accordance with Diamond’s Privacy
           Notice available at: https://www.diamond.ac.uk/Home/Legal-and-Compliance/Privacy-Notice-.html.',
-        height: 175.6015625, enabled: true, auto_expand: false, bold: false, italic: false,
+        height: 157, enabled: true, auto_expand: false, bold: false, italic: false,
         underline: false}
       type: TextArea
       layout_properties: {grid_position: 'XXPWCH,XHOJRU'}

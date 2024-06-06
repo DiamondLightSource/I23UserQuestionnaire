@@ -8,6 +8,9 @@ class questionnaire(questionnaireTemplate):
     self.init_components(**properties)
     self.experimentType = 'not specified'
     self.selected_file = None
+    self.name.text = ""
+    self.email.text = ""
+    self.protein.text = ""
 
   
   def cryoprotectant_show(self, **event_args):
@@ -77,7 +80,7 @@ class questionnaire(questionnaireTemplate):
 
   def submit_click(self, **event_args):
     anvil.server.call("cleanUp")
-    if (self.name.text is None) or (self.email.text is None) or (self.protein.text is None):
+    if (self.name.text == "") or (self.email.text == "") or (self.protein.text == ""):
       alert("Ensure Name, Email and Protein Name are supplied.")
     else:
       self.pathologies()
@@ -85,6 +88,7 @@ class questionnaire(questionnaireTemplate):
       if self.selected_file:
         anvil.server.call('uploadPDB', self.selected_file)
       anvil.server.call("recieveData", self.data)
+      alert("Successfully submitted questionnaire, please check your email for a copy")
       pass
 
   def pathologies(self):
