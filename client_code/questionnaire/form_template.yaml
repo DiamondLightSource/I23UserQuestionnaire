@@ -14,33 +14,34 @@ components:
     layout_properties: {grid_position: 'SHMVFX,OYVHAN'}
     components:
     - name: label_12
-      properties: {text: I23 User Questionnaire, align: center, bold: true, underline: false,
-        background: '', spacing_above: small, spacing_below: medium, font_size: 36}
+      properties: {text: I23 User Questionnaire, align: center, bold: true, underline: false, background: '', spacing_above: small, spacing_below: medium, font_size: 36}
       type: Label
       layout_properties: {grid_position: 'QOXDPX,YXEVCF'}
     - name: infoText
-      properties: {text: 'Please fill in as much of the questionnaire as you can.
-          Any sections you are unable to complete, please leave blank. Hover over
-          components for further information. If you have any questions about this
-          form or I23 in general, please email armin.wagner@diamond.ac.uk.
+      properties:
+        text: |-
+          Please fill in as much of the questionnaire as you can. Any sections you are unable to complete, please leave blank. Hover over components for further information. If you have any questions about this form or I23 in general, please email armin.wagner@diamond.ac.uk.
 
-
-          The information you provide in the form will be available to the I23 beamline
-          team at Diamond to help with planning your experiment. Any personal data
-          submitted in this form will be processed in accordance with Diamond’s Privacy
-          Notice available at: https://www.diamond.ac.uk/Home/Legal-and-Compliance/Privacy-Notice-.html.',
-        height: 157, enabled: true, auto_expand: false, bold: false, italic: false,
-        underline: false}
+          The information you provide in the form will be available to the I23 beamline team at Diamond to help with planning your experiment. Any personal data submitted in this form will be processed in accordance with Diamond’s Privacy Notice available at: https://www.diamond.ac.uk/Home/Legal-and-Compliance/Privacy-Notice-.html.
+        height: 157
+        enabled: true
+        auto_expand: false
+        bold: false
+        italic: false
+        underline: false
       type: TextArea
       layout_properties: {grid_position: 'XXPWCH,XHOJRU'}
       data_bindings: []
+    - name: label_22
+      properties: {text: Inputs with * are mandatory}
+      type: Label
+      layout_properties: {grid_position: 'BAAGSE,NHSHOX'}
   - name: label_3
     properties: {text: Basic Info, align: center, bold: true}
     type: Label
     layout_properties: {grid_position: 'MVOHEH,BPQIVA'}
   - name: label_1
-    properties: {text: '*Name', align: right, tooltip: 'Your name, or the name of
-        the project contact if completing this form on behalf of someone else'}
+    properties: {text: '*Name', align: right, tooltip: 'Your name, or the name of the project contact if completing this form on behalf of someone else'}
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB UNYDXN,DNZDMO', full_width_row: false}
   - name: label_24
@@ -48,18 +49,15 @@ components:
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB IOPBNU,VFQEVD'}
   - name: label_2
-    properties: {text: Group/University, align: right, tooltip: 'The institution you
-        belong to, optionally the group within'}
+    properties: {text: Group/University, align: right, tooltip: 'The institution you belong to, optionally the group within'}
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB FYXSLW,XQDUWT'}
   - name: label_4
-    properties: {text: BAG Number, align: right, tooltip: 'Your Block Allocation Group
-        number, if known'}
+    properties: {text: BAG Number, align: right, tooltip: 'Your Block Allocation Group number, if known'}
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB UTLHYH,FPTUTN'}
   - name: label_30
-    properties: {text: I23 Contact, align: right, tooltip: 'The name of the person
-        you have had contact with on I23, if any'}
+    properties: {text: I23 Contact, align: right, tooltip: 'The name of the person you have had contact with on I23, if any'}
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB RHHRNT,BKOZLJ'}
   - name: label_5
@@ -67,18 +65,16 @@ components:
     type: Label
     layout_properties: {grid_position: 'CTITOL,HGDBCB NGPVIF,OSGJUK'}
   - name: name
-    properties: {align: left, tooltip: 'Your name, or the name of the project contact
-        if completing this form on behalf of someone else'}
+    properties: {align: left, tooltip: 'Your name, or the name of the project contact if completing this form on behalf of someone else'}
     type: TextBox
     layout_properties: {grid_position: 'CTITOL,SZRCGY XFZCIT,RPVDYF'}
   - name: email
-    properties: {type: email, tooltip: eg. name@institution.domain}
+    properties: {type: text, tooltip: eg. name@institution.domain}
     type: TextBox
     layout_properties: {grid_position: 'CTITOL,SZRCGY TLJETO,MUSSTK'}
     data_bindings: []
   - name: group
-    properties: {visible: true, enabled: true, align: left, tooltip: 'eg. Tews Group,
-        Southampton'}
+    properties: {visible: true, enabled: true, align: left, tooltip: 'eg. Tews Group, Southampton'}
     type: TextBox
     layout_properties: {grid_position: 'CTITOL,SZRCGY COBDMU,SUUKUZ'}
   - name: BAG
@@ -87,15 +83,14 @@ components:
     layout_properties: {grid_position: 'CTITOL,SZRCGY IRNMIK,NFUNUI'}
   - name: I23LC
     properties:
-      items: [Kamel El-Omari, Vitaliy Mykhaylyk, Ramona Duman, Christian Orr]
-      include_placeholder: true
-      placeholder: Armin Wagner
+      items: [Armin Wagner, Kamel El-Omari, Vitaliy Mykhaylyk, Ramona Duman, Christian Orr]
+      include_placeholder: false
+      placeholder: ''
       tooltip: Select 'Armin Wagner' if unsure
     type: DropDown
     layout_properties: {grid_position: 'CTITOL,SZRCGY EJMKMB,HCCKDR'}
   - name: phasingRadio
-    properties: {text: Phasing, tooltip: Obtain phases using SAD or MAD from native or non-native elements,
-      selected: false}
+    properties: {text: Phasing, tooltip: Obtain phases using SAD or MAD from native or non-native elements, selected: false}
     type: RadioButton
     layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,HAEOBH'}
     event_bindings: {clicked: phasingRadio_clicked}
@@ -105,8 +100,7 @@ components:
     layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,APONBZ'}
     event_bindings: {clicked: ionRadio_clicked}
   - name: otherRadio
-    properties: {text: Other, tooltip: 'Anything else, we''re always open to trying
-        new experiments!'}
+    properties: {text: Other, tooltip: 'Anything else, we''re always open to trying new experiments!'}
     type: RadioButton
     layout_properties: {grid_position: 'CTITOL,SZRCGY UIAEBL,PXRQNH'}
     event_bindings: {clicked: otherRadio_clicked}
@@ -139,8 +133,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'NECIQH,KVRYAZ'}
   - name: crystallisationConditions
-    properties: {tooltip: 'eg. 5M NaCl, PEG 550, pH 8.3. If you don''t know concentrations,
-        just list components.'}
+    properties: {tooltip: 'eg. 5M NaCl, PEG 550, pH 8.3. If you don''t know concentrations, just list components.'}
     type: TextArea
     layout_properties: {grid_position: 'NECIQH,QJYTXY'}
   - name: lcpCheckBox
@@ -148,8 +141,7 @@ components:
     type: CheckBox
     layout_properties: {grid_position: 'NECIQH,AYTNEX'}
   - name: cryoprotectantCheckBox
-    properties: {text: Cryo-protectant, checked: false, align: right, tooltip: 'Do
-        you require cryoprotectant added to the protein before harvesting?'}
+    properties: {text: Cryo-protectant, checked: false, align: right, tooltip: 'Do you require cryoprotectant added to the protein before harvesting?'}
     type: CheckBox
     layout_properties: {grid_position: 'XNPDCE,GIIYRN'}
     event_bindings: {change: cryoprotectantCheckBox_change}
@@ -169,8 +161,7 @@ components:
     type: DropDown
     layout_properties: {grid_position: 'PGZPGT,CTFPNG'}
   - name: label_11
-    properties: {text: Average Crystal Size, align: right, tooltip: '3 dimensions,
-        approximate'}
+    properties: {text: Average Crystal Size, align: right, tooltip: '3 dimensions, approximate'}
     type: Label
     layout_properties: {grid_position: 'BGEZWO,PWLYOQ FLNJIU,FNGBQZ'}
   - name: label_14
@@ -182,8 +173,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'BGEZWO,PWLYOQ LPKJJA,QRRYIF'}
   - name: label_21
-    properties: {text: Molecules per ASU, align: right, tooltip: 'Number of molecules
-        in the asymmetric unit, if known'}
+    properties: {text: Molecules per ASU, align: right, tooltip: 'Number of molecules in the asymmetric unit, if known'}
     type: Label
     layout_properties: {grid_position: 'BGEZWO,PWLYOQ ABRKCK,HIRDMK'}
   - name: label_16
@@ -197,18 +187,12 @@ components:
   - name: spaceGroup
     properties:
       tooltip: If you have a small molecule with a space group not listed, select Unknown
-      items: [P1, P2, P2(1), C2, P222, P222(1), P2(1)2(1)2, P2(1)2(1)2(1), C222, C222(1),
-        F222, I222, I2(1)2(1)2(1), P4, P4(1), P4(2), P4(3), P422, P42(1)2, P4(1)22,
-        P4(1)2(1)2, P4(2)22, P4(2)2(1)2, P4(3)22, P4(3)2(1)2, I480I4(1), I422, I4(1)22,
-        P3, P3(1), P3(2), P312, P321, P3(1)12, P3(1)21, P3(2)12, P3(2)21, P6, P6(1),
-        P6(5), P6(2), P6(4), P6(3), P622, P6(1)22, P6(5)22, P6(2)22, P6(4)22, P6(3)22,
-        R3, R32, P23, P2(1)3, P432, P4(2)32, P4(3)32, P4(1)32, F23, F432, F4(1)32,
-        I23, I2(1)3, I432, I4(1)32]
+      items: [P1, P2, P2(1), C2, P222, P222(1), P2(1)2(1)2, P2(1)2(1)2(1), C222, C222(1), F222, I222, I2(1)2(1)2(1), P4, P4(1), P4(2), P4(3), P422, P42(1)2, P4(1)22, P4(1)2(1)2, P4(2)22, P4(2)2(1)2, P4(3)22, P4(3)2(1)2, I480I4(1), I422, I4(1)22, P3, P3(1), P3(2), P312, P321, P3(1)12, P3(1)21, P3(2)12, P3(2)21, P6, P6(1), P6(5), P6(2), P6(4), P6(3), P622, P6(1)22, P6(5)22, P6(2)22, P6(4)22, P6(3)22, R3, R32, P23, P2(1)3, P432, P4(2)32, P4(3)32, P4(1)32, F23, F432, F4(1)32, I23, I2(1)3, I432, I4(1)32]
       include_placeholder: false
     type: DropDown
     layout_properties: {grid_position: 'BGEZWO,WRDEOK YGXZVY,LMAZXX'}
   - name: unitCell
-    properties: {placeholder: 150 150 45 90 90 120, type: number}
+    properties: {placeholder: 150 150 45 90 90 120, type: text}
     type: TextBox
     layout_properties: {grid_position: 'BGEZWO,WRDEOK CGLFRI,TJPZTT'}
   - name: molPerASU
@@ -216,8 +200,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'BGEZWO,WRDEOK WXCVZD,GHPWPB'}
   - name: label_18
-    properties: {text: Typical, align: right, tooltip: 'The usual resolution your
-        crystal diffracts to, 9 times out of 10'}
+    properties: {text: Typical, align: right, tooltip: 'The usual resolution your crystal diffracts to, 9 times out of 10'}
     type: Label
     layout_properties: {grid_position: 'BGEZWO,WRDEOK XORTJN,FALRGV'}
   - name: typicalRes
@@ -234,9 +217,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'BGEZWO,WRDEOK XORTJN,LPDGAF'}
   - name: isomorphousCheckBox
-    properties: {text: Isomorphous, align: center, checked: false, tooltip: 'Are your
-        crystals generally the same, eg. they diffract to the same resolution with
-        the same unit cells etc. '}
+    properties: {text: Isomorphous, align: center, checked: false, tooltip: 'Are your crystals generally the same, eg. they diffract to the same resolution with the same unit cells etc. '}
     type: CheckBox
     layout_properties: {grid_position: 'FESUCL,SMBWRS'}
   - name: ligandCheckBox
@@ -252,9 +233,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'LXLKSI,ZEEZEW'}
   - name: label_20
-    properties: {text: Anomalous Scatterer(s) Including Bound Metals, align: right,
-      tooltip: 'The scatterers in your protein. S usually present. Additionally may
-        have Cl, Ca, K etc bound to sites.', bold: false}
+    properties: {text: Anomalous Scatterer(s) Including Bound Metals, align: right, tooltip: 'The scatterers in your protein. S usually present. Additionally may have Cl, Ca, K etc bound to sites.', bold: false}
     type: Label
     layout_properties: {grid_position: 'DNHXPQ,EFSONE LFBMNJ,FHYHTK'}
   - name: label_25
@@ -262,7 +241,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'DNHXPQ,EFSONE GTVYKV,MNMGAI'}
   - name: anomScatterer
-    properties: {tooltip: 'eg. S, P, Cl, K', type: number}
+    properties: {tooltip: 'eg. S, P, Cl, K', type: text}
     type: TextBox
     layout_properties: {grid_position: 'DNHXPQ,LDPQLY DJOCUK,TSRNQB'}
   - name: tNCSCheck
@@ -308,17 +287,12 @@ components:
     type: Label
     layout_properties: {grid_position: 'EFMQYB,CAEZOM'}
   - name: localMountCheckBox
-    properties: {text: Tick if you will bring crystal trays to Diamond to mount samples on the day of the experiment,
-      align: center, tooltip: 'You may have already agreed to mount samples at Diamond
-        on the day of your experiment, in which case you do not need to fill in the
-        rest of this form'}
+    properties: {text: Tick if you will bring crystal trays to Diamond to mount samples on the day of the experiment, align: center, tooltip: 'You may have already agreed to mount samples at Diamond on the day of your experiment, in which case you do not need to fill in the rest of this form'}
     type: CheckBox
     layout_properties: {grid_position: 'NMTTRS,NDEZLB'}
     event_bindings: {change: localMountCheckBox_change}
   - name: label_27
-    properties: {text: Number and Size of Sample Mounts, align: right, tooltip: 'We
-        will ship I23 specific sample mounts to you. We have the following sizes available
-        (in um): 40, 60, 75, 100, 150, 200, 300, 400'}
+    properties: {text: Number and Size of Sample Mounts, align: right, tooltip: 'We will ship I23 specific sample mounts to you. We have the following sizes available (in um): 40, 60, 75, 100, 150, 200, 300, 400'}
     type: Label
     layout_properties: {grid_position: 'JGUQEZ,HUVNTA'}
   - name: mountsSize
@@ -330,9 +304,7 @@ components:
     type: CheckBox
     layout_properties: {grid_position: 'JGUQEZ,AEMMZP'}
   - name: label_28
-    properties: {text: 'Name, Address and Phone Number', align: right, tooltip: 'Please
-        provide as much information as possible, this is where we will ship the sample
-        mounts and puck handling tools if requested. '}
+    properties: {text: 'Name, Address and Phone Number', align: right, tooltip: 'Please provide as much information as possible, this is where we will ship the sample mounts and puck handling tools if requested. '}
     type: Label
     layout_properties: {grid_position: 'WAUITD,AETTBX'}
   - name: address
